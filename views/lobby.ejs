@@ -1,0 +1,17 @@
+<%- include('./head.ejs') %>
+
+    <link rel="stylesheet" href="./css/lobby.css" />
+    <title>Lobby</title>
+</head>
+<body>
+
+<div class="lobby">
+    <% for (const { player, game } of games) { %>
+        <div class="game">
+            <span class="player"><%= player %></span>
+            <span class="gameNumber"><%= game %></span>
+        </div>
+    <% } %>
+</div>
+
+<%- include('./foot.ejs') %>

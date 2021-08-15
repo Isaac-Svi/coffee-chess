@@ -1,0 +1,21 @@
+<nav>
+    <div id="logo">
+        <a href="/">Coffee-Chess ☕</a>
+    </div>
+    <ul>
+        <% if (!user) { %> 
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/register">Register</a>
+            </li>
+        <% } else { %>
+            <li>
+                <a href="/chess">Chess</a>
+            </li>
+            <form onsubmit="logout(event)" action="/logout" method="POST">
+                <button class="logout-btn">Log out</button></form>
+        <% } %>
+    </ul>
+</nav>

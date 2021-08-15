@@ -1,0 +1,6 @@
+<i class="fas fa-chess-pawn"></i>
+<i class="fas fa-chess-bishop"></i>
+<i class="fas fa-chess-knight"></i>
+<i class="fas fa-chess-queen"></i>
+<i class="fas fa-chess-king"></i>
+<i class="fas fa-chess-rook"></i>

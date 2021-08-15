@@ -1,0 +1,16 @@
+<%- include('./partials/head.ejs') %>
+
+    <link rel="stylesheet" href="./css/chess.css" />
+    <title>Chess</title>
+</head>
+<body>
+
+<%- include('./partials/nav.ejs') %>
+
+<script type="module">
+    import { Game } from './js/chess/Game.mjs'
+
+    const g = new Game()
+</script>
+
+<%- include('./partials/foot.ejs') %>

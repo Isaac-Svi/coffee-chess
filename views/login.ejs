@@ -1,0 +1,20 @@
+<%- include('./partials/head.ejs') %>
+
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Login</title>
+</head>
+<body>
+
+<%- include('./partials/nav.ejs') %>
+
+<form action="/login" method="POST" class="login">
+    <h2>Login</h2>
+    <div class="error"></div>
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button>Log In</button>
+</form>
+
+<script src="/js/login.js"></script>
+
+<%- include('./partials/foot.ejs') %>
