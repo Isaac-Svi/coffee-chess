@@ -42,14 +42,10 @@ router.route('/:id').get(async (req, res) => {
         const challengerSocket = sockets[challenger_id + '']
         const io = getIo()
 
-        console.log(io)
-
         const ids = []
         for (const socket of io.sockets.sockets) {
             ids.push(socket.id)
         }
-
-        console.log(challengerSocket, sockets, ids)
 
         // io.sockets.sockets.get(challengerSocket).join(url)
         // io.to(url).emit('game begin', insertedGame)

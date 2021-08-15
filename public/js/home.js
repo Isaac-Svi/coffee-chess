@@ -18,25 +18,25 @@ socket.on('game begin', (game) => {
 })
 
 socket.on('game created', (details) => {
-    const { game_id, player_white, player_black, minutes, seconds } = details
+    const { user, game_id, player_white, player_black, minutes, seconds } = details
     console.log(details)
 
-    // const _ = document.createElement
+    const _ = document.createElement
 
-    // const game = _('div'),
-    //     ply = _('span'),
-    //     sd = _('span'),
-    //     time = _('span')
+    const game = _('div'),
+        ply = _('span'),
+        sd = _('span'),
+        time = _('span')
 
-    // ply.innerText = player
-    // sd.innerText = side
-    // time.innerText = `${minutes}:${seconds}`
+    ply.innerText = player
+    sd.innerText = side
+    time.innerText = `${minutes}:${seconds}`
 
-    // game.append(ply)
-    // game.append(sd)
-    // game.append(time)
+    game.append(ply)
+    game.append(sd)
+    game.append(time)
 
-    // game.addEventListener('click', () => (window.location.href = gameURL))
+    game.addEventListener('click', () => (window.location.href = gameURL))
 })
 
 const closeModal = () => {

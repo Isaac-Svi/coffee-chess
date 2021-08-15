@@ -31,8 +31,8 @@ myModule.getIo = () => globalIo
 async function createGame(socket, details) {
     let { player, side, minutes, seconds } = details
 
-    const [{ user_id }] = await conn('users')
-        .select('user_id')
+    const [{ user_id, username }] = await conn('users')
+        .select('user_id', 'username')
         .where({ username: player })
 
     const newGame = {
@@ -41,6 +41,7 @@ async function createGame(socket, details) {
         minutes,
         seconds,
         challenger_id: user_id,
+        user: username,
         challenger_side:
             side === 'random' ? (Math.random() > 0.5 ? 'white' : 'black') : side,
     }
@@ -50,5 +51,5 @@ async function createGame(socket, details) {
     fs.writeFileSync(currentGamesPath, JSON.stringify(games, null, 2))
 
     // socket.join(newGame.id)
-    socket.emit('game created', games)
+    socket.emit('game created', newGame)
 }

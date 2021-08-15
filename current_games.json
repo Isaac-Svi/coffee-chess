@@ -1,10 +1,11 @@
 [
   {
-    "id": "62607c46-40a0-4acc-bc11-d3fb72d97c69",
+    "id": "b323b4e1-15d3-445e-a11c-4c4a6424c67b",
     "challenger": "asdfasdf",
-    "minutes": "5",
-    "seconds": "20",
-    "challenger_id": 2,
-    "challenger_side": "white"
+    "minutes": "4",
+    "seconds": "3",
+    "challenger_id": 11,
+    "user": "asdfasdf",
+    "challenger_side": "black"
   }
 ]
